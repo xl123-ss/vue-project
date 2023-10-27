@@ -16,10 +16,18 @@ jobs:
         with:
           username: ${{ secrets.DOCKER_USERNAME }}
           password: ${{ secrets.DOCKER_PASSWORD }}
+      - name: Setup Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: 14 # 指定所需的 Node.js 版本
+      - name: Install Dependencies
+        run: npm install
+      - name: Build Vue.js Project
+        run: npm run build
       - name: Build and push
         id: docker_build
         uses: docker/build-push-action@v2
         with:
           push: true
           platforms: linux/amd64,linux/arm64
-          tags: xuelongxl/vue-project:2.0
+          tags: xuelongxl/vue-project:3.0
