@@ -30,4 +30,4 @@ jobs:
         with:
           push: true
           platforms: linux/amd64,linux/arm64
-          tags: xuelongxl/vue-project:3.0
+          tags: xuelongxl/vue-project:4.0
