@@ -22,4 +22,4 @@ jobs:
         with:
           push: true
           platforms: linux/amd64,linux/arm64
-          tags: swback/vue-image:2.0
+          tags: xl123-ss/vue-project:1.0
